@@ -22,14 +22,11 @@ namespace WeatherMonitoringSystem
             IDisplay statisticsDisplay = weatherStation.CreateDisplay("statistics");
             IDisplay forecastDisplay = weatherStation.CreateDisplay("forecast");
 
-            // Simulate weather changes
-            for (int i = 0; i < 5; i++)
-            {
-                // Simulate weather data change
+            // Simulate weather data change
                 weatherData.SetMeasurements(GetRandomTemperature(), GetRandomHumidity(), GetRandomPressure());
 
                 
-            }
+            
         }
 
         // Helper method to get random temperature for simulation

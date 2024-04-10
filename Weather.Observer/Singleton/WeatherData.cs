@@ -52,8 +52,12 @@ namespace Weather.Observer.Singleton
                 observer.Display();
             }
         }
-
-        // Simulate weather data change
+       /// <summary>
+        /// Simulate weather data change
+       /// </summary>
+        /// <param name="temperature">The current temperature.</param>
+        /// <param name="humidity">The current humidity.</param>
+        /// <param name="pressure">The current atmospheric pressure</param>
         public void SetMeasurements(float temperature, float humidity, float pressure)
         {
             this.temperature = temperature;
