@@ -28,16 +28,15 @@ namespace WeatherMonitoringSystem
                 // Simulate weather data change
                 weatherData.SetMeasurements(GetRandomTemperature(), GetRandomHumidity(), GetRandomPressure());
 
-                // Wait for some time before the next simulation
-                System.Threading.Thread.Sleep(2000);
+                
             }
         }
 
         // Helper method to get random temperature for simulation
         static float GetRandomTemperature()
         {
-            Random rand = new Random();
-            return (float)(rand.NextDouble() * (100 - 0) + 0); // Simulate temperature between 0 and 100 degrees Fahrenheit
+            Random random = new Random();
+            return (float)(random.NextDouble() * (100 - 0) + 0); // Simulate temperature between 0 and 100 degrees Fahrenheit
         }
 
         // Helper method to get random humidity for simulation

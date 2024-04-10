@@ -24,7 +24,7 @@ namespace Weather.Observer.Observers
         public void Display()
         {
             Console.WriteLine("Current conditions: Temperature - " + weatherData.GetTemperature() +
-                              "F degrees and Humidity - " + weatherData.GetHumidity() + "%");
+                              "F degrees and Humidity - " + weatherData.GetHumidity() + "%"+ " and Presuure " + weatherData.GetPressure());
         }
     }
 }
