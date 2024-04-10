@@ -1,13 +1,20 @@
 using System;
-using WeatherMonitoringSystem.Interfaces;
+using Weather.Observer;
 
-namespace WeatherMonitoringSystem.Factory
+using Weather.Observer.Interfaces;
+using Weather.Observer.Singleton;
+using Weather.Observer.Observers;
+
+namespace Weather.Observer.Factory
 {
+    /// <summary>
+    /// Factory for creating different types of displays.
+    /// </summary>
     public class WeatherStation
     {
-        private readonly IWeatherData weatherData;
+        private readonly WeatherData weatherData;
 
-        public WeatherStation(IWeatherData weatherData)
+        public WeatherStation(WeatherData weatherData)
         {
             this.weatherData = weatherData;
         }
@@ -23,7 +30,7 @@ namespace WeatherMonitoringSystem.Factory
                 case "forecast":
                     return new ForecastDisplay(weatherData);
                 default:
-                    throw new ArgumentException("Invalid display type");
+                    throw new ArgumentException("Invalid display type.");
             }
         }
     }
